@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="style.css"> <!-- Link to CSS file -->
+</head>
+<body>
+    <div class="container">
+        <h2>Next-Gen Password Generator</h2>
+
+        <div class="password-container">
+            <input type="password" id="password" readonly>
+            <span class="icon-btn" id="togglePassword" title="Show/Hide Password">👁️</span>
+            <span class="icon-btn" id="copyPassword" title="Copy Password">📋</span>
+        </div>
+
+        <div class="options">
+            <label><input type="checkbox" id="uppercase" checked> Uppercase</label>
+            <label><input type="checkbox" id="lowercase" checked> Lowercase</label>
+            <label><input type="checkbox" id="numbers" checked> Numbers</label>
+            <label><input type="checkbox" id="symbols" checked> Symbols</label>
+        </div>
+
+        <label for="customText">Enter Custom Characters:</label>
+        <input type="text" id="customText" placeholder="Your characters here">
+
+        <label for="length">Password Length:</label>
+        <input type="number" id="length" value="12" min="1" max="128">
+
+        <div class="strength-label" id="strengthLabel">Strength: Weak</div>
+
+        <button onclick="generatePassword()">Generate Password</button>
+
+        <div class="strength-bar">
+            <div class="strength-fill" id="strengthFill"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script> <!-- Link to JavaScript file -->
+</body>
+</html>
